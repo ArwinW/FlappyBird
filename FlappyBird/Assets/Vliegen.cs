@@ -28,7 +28,11 @@ public class Vliegen : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        doodgaan();
+        if (collision.gameObject.tag == "Obstakel")
+        {
+            doodgaan();
+        }
+            
     }
 
     void doodgaan()
